@@ -68,7 +68,3 @@ let newData = await this.sampleModel.sample(req);
 ```
 
 
-# Notes
-<p>Clickable prototype should be loaded in server</p>
-
-
