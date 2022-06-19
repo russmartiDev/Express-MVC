@@ -1,5 +1,5 @@
 # About The Project
-A simple MVC Frame work
+A simple MVC Framework using express
 
 # Built With
 <p>Node Js</p>
