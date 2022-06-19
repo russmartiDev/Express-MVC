@@ -15,18 +15,58 @@ A simple MVC Frame work
 <p>Type in Terminal node app.js<p>
 
 # Documentation
+<b>config/config.js</b>
+```javascript
+    {
+        this.serverPort = "5000"; //sever port
+        this.dbconf = //database config
+        {
+            host: "localhost",
+            user: "root",
+            password: "1234",
+            database: "express2",
+            port: 3306
+        };
+        this.session = true;
+    }
+```
+
 <b>Add routes in config/routes</b>
-<p>"Router.get("/", controller("SampleController", "SampleView"));"</p>
+```javascript
+Router.get("/", controller("SampleController", "SampleView"));
+```
 </br>
 
-<b>Add Model Function</b>
-<p>"name = async function(req)
+<b>Add Model in models/modelname</b>
+```javascript
+name = async function(req)
     {
         let sampleData = await this.query( "SELECT sample, email FROM sample WHERE id = $1", [req.session.id]);
         return user[0];
-    }"
-</p>
+    }
+```
 </br>
+
+<b>Use Model in controller</b>
+```javascript
+this.sampletModel = this.model("Sample");
+```
+</br>
+
+<b>Add controller in controllers/controllerName</b>
+```javascript
+index = async function(req, res)
+    {
+        res.render("viewName");
+    }
+```
+</br>
+
+<b>Use Model Function in controller</b>
+```javascript
+let newData = await this.sampleModel.sample(req);
+```
+
 
 # Notes
 <p>Clickable prototype should be loaded in server</p>

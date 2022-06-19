@@ -11,10 +11,7 @@ class Config
             database: "express2",
             port: 3306
         };
-
         this.session = true;
-
-
     }
 }
 module.exports = new Config();
