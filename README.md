@@ -5,7 +5,6 @@ A simple MVC Framework using express
 <p>Node Js</p>
 <p>Express Js</p>
 <p>EJS</p>
-<p>Redis</p>
 <p>MySql</p>
 
 # How to run?
