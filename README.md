@@ -42,7 +42,7 @@ Router.get("/", controller("SampleController", "SampleView"));
 name = async function(req)
     {
         let sampleData = await this.query( "SELECT sample, email FROM sample WHERE id = $1", [req.session.id]);
-        return user[0];
+        return sampleData[0];
     }
 ```
 </br>
